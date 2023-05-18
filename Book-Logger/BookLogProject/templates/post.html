@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    New Post
+{% endblock %}
+
+{% block main %}
+
+<h1 class="display-1 post-header-padding">{{ title }}</h1>
+<h1 class="display-3 post-header-padding">By: {{ author }}</h1>
+<h1 class="display-4 post-header-padding">Rating: {{ rating }}</h1>
+<h1 class="display-6 post-header-padding">Date Added: {{ datetime }}</h1>
+
+
+<div class="accordion" id="accordionPanelsStayOpen">
+
+     <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                Summary
+             </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+                {{ summary }}
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                Takeaways
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+                {{ takeaway }}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
